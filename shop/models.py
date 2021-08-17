@@ -52,6 +52,7 @@ class Sale(models.Model):
 	quantity = models.FloatField(default=0)
 	sold_by = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True)
 	item_unit = models.CharField(max_length=20, default="Kg")
+	unit_price = models.FloatField(default=0)
 	date_sold = models.DateField(default=timezone.now)
 
 	def __str__(self):
@@ -63,3 +64,13 @@ class Sale(models.Model):
 	def get_absolute_url(self):
 		return reverse("sales")
 
+class LossProfit(models.Model):
+	stock_value = models.FloatField(default=0)
+	sales_value = models.FloatField(default=0)
+	profit_or_loss = models.FloatField(default=0)
+
+	def __str__(self):
+		return "Sales Value-Stock Value"
+
+	def get_profit_or_loss(self):
+		return self.sales_value - self.stock_value

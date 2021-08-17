@@ -1,70 +1,70 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>LOGIN | ATMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
-  <title>LOGIN | KIOSK</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="{% static 'nice-admin/css/bootstrap.min.css' %}" rel="stylesheet">
-  <!-- bootstrap theme -->
-  <link href="{% static 'nice-admin/css/bootstrap-theme.css' %}" rel="stylesheet">
-  <!--external css-->
   <!-- font icon -->
   <link href="{% static 'nice-admin/css/elegant-icons-style.css' %}" rel="stylesheet" />
   <link href="{% static 'nice-admin/css/font-awesome.min.css' %}" rel="stylesheet" />
   <!-- full calendar css-->
-  <link href="{% static 'nice-admin/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css' %}" rel="stylesheet" />
-  <link href="{% static 'nice-admin/assets/fullcalendar/fullcalendar/fullcalendar.css' %}" rel="stylesheet" />
-  <!-- easy pie chart-->
-  <link href="{% static 'nice-admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css' %}" rel="stylesheet" type="text/css" media="screen" />
-  <!-- owl carousel -->
-  <link rel="stylesheet" href="{% static 'nice-admin/css/owl.carousel.css' %}" type="text/css">
-  <link href="{% static 'nice-admin/css/jquery-jvectormap-1.2.2.css' %}" rel="stylesheet">
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="{% static 'nice-admin/css/fullcalendar.css' %}">
-  <link href="{% static 'nice-admin/css/widgets.css' %}" rel="stylesheet">
-  <link href="{% static 'nice-admin/css/style.css' %}" rel="stylesheet">
-  <link href="{% static 'nice-admin/css/style-responsive.css' %}" rel="stylesheet" />
-  <link href="{% static 'nice-admin/css/xcharts.min.css' %}" rel=" stylesheet">
-  <link href="{% static 'nice-admin/css/jquery-ui-1.10.4.min.css' %}" rel="stylesheet">
 
-</head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="{% static 'login-form-19/css/style.css' %}">
 
-<body class="login-img3-body">
-
-  <div class="container">
-    <form class="login-form" action="" method="post">
-      <h2 class="text-center">KIOSK ADMIN</h2>
-      <div class="login-wrap">
-        <p class="login-img"><i class="icon_lock_alt"></i></p>
-        {% csrf_token %}
-        <div class="input-group">
-          <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" class="form-control" name="username" id="username" placeholder="Username" autofocus>
+  </head>
+  <body>
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
         </div>
-        <div class="input-group">
-          <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-        </div>
-        <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
-                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
-            </label>
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
       </div>
-    </form>
-    <div class="text-right">
-      <div class="credits">
-          Designed by <a href="#">Amos Kip</a>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="login-wrap py-5">
+            
+            <h3 class="text-center mb-0">KMS LOGIN</h3>
+            <p class="text-center">Enter details to login</p>
+            <form action="#" class="login-form" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+              </div>
+              <div class="form-group">
+                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+              </div>
+              <div class="form-group d-md-flex">
+                <div class="w-100 text-md-right">
+                  <a href="#">Forgot Password</a>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn form-control btn-primary rounded submit px-3">Login!</button>
+              </div>
+            </form>
+            <div class="w-100 text-center mt-4 text">
+              <p class="mb-0">Don't have an account?</p>
+              <a href="#">Sign Up</a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-</body>
+  <script src="{% static 'login-form-19/js/jquery.min.js' %}"></script>
+  <script src="{% static 'login-form-19/js/popper.js' %}"></script>
+  <script src="{% static 'login-form-19/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'login-form-19/js/main.js' %}"></script>
 
+  </body>
 </html>
+

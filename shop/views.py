@@ -43,6 +43,10 @@ class AddEmployee(CreateView):
 	fields = "__all__"
 	template_name = "new-employee.html"
 
+class LossProfit(ListView):
+	model = LossProfit
+	template_name = "profit-loss.html"
+
 
 from django.shortcuts import render, redirect
 
