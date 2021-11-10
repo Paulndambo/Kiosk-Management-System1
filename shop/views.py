@@ -12,7 +12,6 @@ def home(request):
 		"stock": stock,
 		"sales_today": sales_today
 	}
-
 	return render(request, "index.html", context)
 
 

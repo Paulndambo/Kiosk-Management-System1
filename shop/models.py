@@ -59,7 +59,7 @@ class Sale(models.Model):
 		return str(self.item)
 
 	def get_selling_price(self):
-		return self.item.price * self.quantity
+		return self.unit_price * self.quantity
 
 	def get_absolute_url(self):
 		return reverse("sales")
